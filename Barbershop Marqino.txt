@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Barbershop_Marqino - Termin buchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 2px;
+        }
+        main {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #222;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+        button {
+            background-color: #222;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Barbershop_Marqino
+    </header>
+    <main>
+        <h2>Termin zum Haare schneiden buchen</h2>
+        <form id="bookingForm" action="mailto:deine-email@beispiel.de" method="POST" enctype="text/plain">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="Name" required placeholder="Dein Name" />
+
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="E-Mail" required placeholder="Deine E-Mail-Adresse" />
+
+            <label for="phone">Telefonnummer</label>
+            <input type="tel" id="phone" name="Telefonnummer" placeholder="Optional" />
+
+            <label for="date">Datum</label>
+            <input type="date" id="date" name="Datum" required />
+
+            <label for="time">Uhrzeit</label>
+            <select id="time" name="Uhrzeit" required>
+                <option value="" disabled selected>Wähle eine Uhrzeit</option>
+                <option>09:00</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+            </select>
+
+            <label for="notes">Besondere Wünsche / Anmerkungen</label>
+            <textarea id="notes" name="Anmerkungen" rows="4" placeholder="Optional"></textarea>
+
+            <button type="submit">Termin anfragen</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2024 Barbershop_Marqino
+    </footer>
+</body>
+</html>
